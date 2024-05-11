@@ -1,0 +1,19 @@
+@import "../../common/function";
+
+.header-private {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: to-rem(60);
+  padding: calc-rem(0, 24);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow:
+    rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+
+  &__logo {
+    max-width: 60px;
+  }
+}

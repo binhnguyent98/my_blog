@@ -1,0 +1,26 @@
+@import "../../common/function";
+
+.app-container {
+  padding: 0 calc-rem(16);
+  width: 100%;
+
+  &__xl {
+    max-width: theme("screens.xl.max");
+    margin: 0 auto;
+  }
+
+  &__lg {
+    max-width: theme("screens.lg.max");
+    margin: 0 auto;
+  }
+
+  &__md {
+    max-width: theme("screens.md.max");
+    margin: 0 auto;
+  }
+
+  &__sm {
+    max-width: theme("screens.sm.max");
+    margin: 0 auto;
+  }
+}

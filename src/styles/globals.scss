@@ -1,0 +1,20 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "common/nprocess-bar";
+
+h2 {
+  font-size: 32;
+  line-height: 1.4;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 28px;
+  line-height: 1.6;
+  font-weight: bold;
+}
+
+body {
+  color: theme("colors.white");
+}

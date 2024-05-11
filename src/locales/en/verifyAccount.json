@@ -1,0 +1,11 @@
+{
+  "title": "Verify",
+  "message": {
+    "verified": "Email is verified !",
+    "error": "Email is error !",
+    "verified_des": "Your email has been successfully verified. You can go back to the login page.",
+    "error_des": "Your email verify is error."
+  },
+  "btn_login": "Go to login page",
+  "btn_resent_email": "Resent email"
+}

@@ -1,0 +1,50 @@
+@import 'common/function';
+
+.button {
+  height: unset;
+  box-shadow: rgb(149 157 165 / 20%) 0 8px 24px;
+  font-weight: bold;
+  border: none;
+
+  &__type {
+    &__primary {
+      background: theme('colors.primary');
+      color: theme('colors.white');
+    }
+
+    &__danger {
+      background: theme('colors.error');
+      color: theme('colors.white');
+    }
+
+    &__outlined {
+      background: theme('colors.white');
+      color: theme('colors.black');
+      border: 1px solid theme('colors.gray-1');
+    }
+
+    &__none {
+      background-color: transparent;
+      border: none;
+      padding: unset;
+    }
+  }
+
+  &__size {
+    &__xs {
+      padding: calc-rem(8, 18);
+    }
+
+    &__sm {
+      padding: calc-rem(10, 20);
+    }
+
+    &__md {
+      padding: calc-rem(12, 22);
+    }
+
+    &__lg {
+      padding: calc-rem(16, 24);
+    }
+  }
+}
