@@ -1,6 +1,8 @@
-@import "common/function";
+@import 'common/function';
 
 .app-loading {
+  $app-selector: &;
+
   overflow: hidden;
   position: absolute;
   inset: 0;
@@ -12,7 +14,7 @@
 
   &::before,
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     width: 50%;
     height: 100%;
@@ -21,10 +23,11 @@
     transition-delay: 0.3s;
   }
 
-  &:before {
+  &::before {
     left: 0;
   }
-  &:after {
+
+  &::after {
     right: 0;
   }
 
@@ -33,7 +36,7 @@
   }
 
   &__title {
-    color: theme("colors.white");
+    color: theme('colors.white');
   }
 
   &__overplay {
@@ -49,7 +52,7 @@
   &__loader {
     width: calc-rem(60);
     height: calc-rem(60);
-    border: 3px solid theme("colors.white");
+    border: 3px solid theme('colors.white');
     border-bottom: 3px solid transparent;
     border-radius: 50%;
     position: relative;
@@ -64,21 +67,23 @@
       border: 3px solid transparent;
       border-top: 3px solid white;
       border-radius: 50%;
-      animation: spinInner 1s linear infinite;
+      animation: spin-inner 1s linear infinite;
     }
   }
 }
 
 .app-loaded {
   z-index: -99;
-  &:before {
+
+  &::before {
     left: -50%;
   }
-  &:after {
+
+  &::after {
     right: -50%;
   }
 
-  .app-loading__overplay {
+  #{$app-selector}__overplay {
     opacity: 0;
     transition: 0.2s;
   }
@@ -88,14 +93,17 @@
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
-@keyframes spinInner {
+
+@keyframes spin-inner {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(-720deg);
   }

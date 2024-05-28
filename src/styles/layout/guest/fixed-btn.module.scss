@@ -1,0 +1,9 @@
+@import '../../common/function';
+
+.fixed-btn {
+  width: calc-rem(20);
+  height: calc-rem(20);
+  position: fixed;
+  bottom: 10%;
+  right: calc-rem(20);
+}

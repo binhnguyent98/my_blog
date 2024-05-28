@@ -1,0 +1,120 @@
+@import '../../common/function';
+
+.section-our-skill {
+  border-top: 1px solid theme('colors.gray-3');
+
+  &__content {
+    padding: calc-rem(100, 0);
+
+    @screen md {
+      padding: calc-rem(30, 0);
+    }
+
+    @screen xs {
+      padding: calc-rem(20, 0);
+    }
+
+    &__skill {
+      display: flex;
+      align-items: center;
+
+      @screen md {
+        flex-direction: column;
+        gap: calc-rem(30);
+      }
+
+      &__heading {
+        width: calc-rem(400);
+
+        @screen xl {
+          width: calc-rem(360);
+        }
+
+        @screen lg {
+          width: calc-rem(300);
+        }
+
+        @screen md {
+          width: 100%;
+        }
+      }
+
+      &__list {
+        flex: 1;
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: calc-rem(30);
+
+        @screen md {
+          width: 100%;
+          grid-template-columns: auto;
+        }
+
+        &__item {
+          padding: calc-rem(30);
+          border-radius: calc-rem(10);
+          border: 1px solid theme('colors.gray-3');
+          display: flex;
+          align-items: center;
+          gap: calc-rem(20);
+          position: relative;
+          overflow: hidden;
+
+          &__percent {
+            position: absolute;
+            top: calc-rem(10);
+            right: calc-rem(10);
+            padding: calc-rem(4, 6);
+            border-radius: calc-rem(10);
+            border: 1px solid theme('colors.gray-3');
+          }
+
+          &__bottom-bar {
+            position: absolute;
+            width: 100%;
+            height: calc-rem(2);
+            bottom: 0;
+            left: 0;
+            border-radius: 2px;
+            background: theme('colors.gray-4');
+            overflow: hidden;
+
+            &::before {
+              content: '';
+              height: 100%;
+              position: absolute;
+              background: theme('colors.white');
+            }
+          }
+        }
+      }
+    }
+
+    &__award {
+      margin-top: calc-rem(60);
+      display: grid;
+      grid-template-columns: auto auto auto;
+      gap: calc-rem(30);
+
+      @screen md {
+        margin-top: calc-rem(40);
+        grid-template-columns: auto auto;
+      }
+
+      @screen sm {
+        margin-top: calc-rem(20);
+        grid-template-columns: auto;
+      }
+
+      &__item {
+        padding: calc-rem(40);
+        background: theme('colors.primary');
+        border-radius: calc-rem(10);
+
+        @screen md {
+          padding: calc-rem(20);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+@import '../../common/function';
+
+.section-contact {
+  border-top: 1px solid theme('colors.gray-3');
+
+  &__content {
+    display: flex;
+    padding: calc-rem(100, 0);
+
+    @apply space-x-8;
+
+    @screen md {
+      flex-direction: column;
+      padding: calc-rem(30, 0);
+    }
+
+    @screen sm {
+      padding: calc-rem(20, 0);
+    }
+
+    &__content {
+      max-width: calc-rem(500);
+      width: 100%;
+
+      @screen md {
+        max-width: 100%;
+      }
+    }
+
+    &__heading {
+      text-align: center;
+    }
+
+    &__social {
+      margin-top: calc-rem(40);
+      display: flex;
+      flex-wrap: wrap;
+      gap: calc-rem(16);
+
+      &__item {
+        transition: all 0.4s;
+
+        &:hover {
+          margin-top: calc-rem(8);
+        }
+      }
+
+      @screen md {
+        margin-top: calc-rem(30);
+      }
+
+      @screen sm {
+        margin-top: calc-rem(20);
+      }
+    }
+
+    &__form {
+      flex: 1;
+
+      & input,
+      textarea {
+        background-color: transparent;
+        color: theme('colors.white');
+        border-color: theme('colors.gray-3');
+        transition: all 0.4s;
+
+        &:hover,
+        &:active,
+        &:focus {
+          border-color: theme('colors.white');
+        }
+
+        &::placeholder {
+          color: theme('colors.gray-3');
+          transition: all 0.4s;
+        }
+      }
+    }
+  }
+}

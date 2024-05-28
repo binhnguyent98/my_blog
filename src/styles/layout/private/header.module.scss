@@ -1,4 +1,4 @@
-@import "../../common/function";
+@import '../../common/function';
 
 .header-private {
   position: fixed;
@@ -9,9 +9,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow:
-    rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
-    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  box-shadow: rgb(136 165 191 / 48%) 6px 2px 16px 0, rgb(255 255 255 / 80%) -6px -2px 16px 0;
 
   &__logo {
     max-width: 60px;

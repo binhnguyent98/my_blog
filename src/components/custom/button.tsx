@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import style from '@/styles/components/element/button.module.scss';
 
-declare const ButtonTypes: readonly ['primary', 'outlined', 'danger', 'none'];
+declare const ButtonTypes: readonly ['primary', 'outlined', 'line-prefix', 'danger', 'none', 'text'];
 declare const ButtonSizes: readonly ['xs', 'sm', 'md', 'lg'];
 
 export interface BtnCustomProps extends Omit<ButtonProps, 'type' | 'size'> {
@@ -22,7 +22,8 @@ const RenderBtn = ({ children, link }: { children: React.ReactNode; link?: strin
 };
 
 export const Button = (props: BtnCustomProps) => {
-  const { type, size, link, className, ...rest } = props;
+  const { type, size, link, className, children, ...rest } = props;
+  const renderChildren = type === 'line-prefix' || 'outlined' ? <span className={style['button__render']}>{children}</span> : children;
 
   return (
     <RenderBtn link={link}>
@@ -30,7 +31,7 @@ export const Button = (props: BtnCustomProps) => {
         {...rest}
         className={clsx(style['button'], type && style[`button__type__${type}`], size && style[`button__size__${size}`], className)}
       >
-        {props.children}
+        {renderChildren}
       </ButtonAntd>
     </RenderBtn>
   );

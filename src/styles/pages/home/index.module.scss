@@ -1,15 +1,193 @@
 @import '../../common/function';
 
-.home {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+$width-bar: 450;
 
-  &__menu {
+.home-page {
+  display: flex;
+
+  @screen md {
+    flex-direction: column;
+  }
+
+  &__thumbnail {
+    padding-top: calc-rem(80);
+    padding-right: calc-rem(40);
+    padding-bottom: 1px;
+
+    @screen md {
+      padding: calc-rem(80, 0, 0, 0);
+    }
+
+    @screen sm {
+      padding-top: calc-rem(30);
+    }
+
+    &__box {
+      border: 1px solid theme('colors.gray-2');
+      border-radius: calc-rem(4);
+      padding: calc-rem(40, 16);
+
+      @screen sm {
+        padding: calc-rem(20, 16);
+      }
+
+      &__content {
+        text-align: center;
+        margin-top: calc-rem(30);
+
+        @screen sm {
+          margin-top: calc-rem(20);
+        }
+      }
+
+      &__thumbnail {
+        position: relative;
+
+        &__icon {
+          position: absolute;
+          padding: calc-rem(5);
+          border-radius: calc-rem(5);
+          border: 1px solid theme('colors.gray-3');
+          backdrop-filter: blur(5px);
+        }
+      }
+    }
+  }
+
+  &__info {
+    flex: 1;
+    padding: calc-rem(80, 0, 80, 40);
+
+    @screen md {
+      padding: calc-rem(20, 0);
+    }
+
+    &__about {
+      font-size: calc-rem(48);
+      font-weight: 500;
+      white-space: pre-line;
+
+      @screen sm {
+        font-size: calc-rem(32);
+      }
+
+      &__hight-light {
+        border: 1px solid theme('colors.gray-2');
+        padding: 0 calc-rem(10);
+        position: relative;
+
+        @screen md {
+          display: none;
+        }
+
+        &::before,
+        &::after {
+          content: '';
+          width: calc-rem(10);
+          height: calc-rem(10);
+          position: absolute;
+          pointer-events: none;
+        }
+
+        &::before {
+          left: calc-rem(-3);
+          border-left: 1px solid white;
+          border-top: 1px solid white;
+        }
+
+        &::after {
+          right: calc-rem(-3);
+          bottom: 0;
+          border-right: 1px solid white;
+          border-bottom: 1px solid white;
+        }
+      }
+    }
+
+    &__status {
+      margin-top: calc-rem(80);
+      display: flex;
+      flex-wrap: wrap;
+      gap: calc-rem(40);
+
+      @screen md {
+        margin-top: calc-rem(40);
+        padding-bottom: calc-rem(60);
+      }
+
+      @screen sm {
+        margin-top: calc-rem(30);
+        padding-bottom: calc-rem(20);
+      }
+
+      &__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: calc-rem(10);
+      }
+
+      &__text {
+        font-size: calc-rem(70);
+        line-height: 1.2;
+
+        @screen sm {
+          font-size: calc-rem(40);
+        }
+
+        @screen xs {
+          font-size: calc-rem(28);
+        }
+      }
+
+      &__sub-text {
+        white-space: pre-line;
+        font-size: calc-rem(16);
+        line-height: 1;
+
+        @screen sm {
+          font-size: calc-rem(12);
+        }
+      }
+    }
+  }
+
+  &__bar {
+    height: calc-rem(80);
     display: flex;
-    margin-top: calc-rem(20);
-    padding: calc-rem(10);
-    column-gap: calc-rem(20);
+    flex: 1;
+    width: 100%;
+
+    & > div {
+      &:first-child {
+        width: calc-rem($width-bar + 20);
+        background: theme('colors.secondary');
+        border-bottom-left-radius: calc-rem(10);
+        border-bottom-right-radius: calc-rem(10);
+
+        @screen md {
+          width: 100%;
+        }
+      }
+
+      &:nth-child(2) {
+        flex: 1;
+        background: theme('colors.primary');
+        position: relative;
+        border-top-left-radius: calc-rem(10);
+        border-top-right-radius: calc-rem(10);
+
+        &::after {
+          content: '';
+          width: 0;
+          height: 0;
+          border-left: calc-rem(80) solid theme('colors.secondary');
+          border-bottom: calc-rem(75) solid transparent;
+          position: absolute;
+          left: 0;
+          bottom: 6px;
+        }
+      }
+    }
   }
 }

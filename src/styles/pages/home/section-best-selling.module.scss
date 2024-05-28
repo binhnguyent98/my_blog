@@ -1,0 +1,110 @@
+@import '../../common/function';
+
+.section-best-selling {
+  border-top: 1px solid theme('colors.gray-3');
+
+  &__content {
+    padding: calc-rem(100, 0);
+
+    @screen md {
+      padding: calc-rem(30, 0);
+    }
+
+    @screen sm {
+      padding: calc-rem(20, 0);
+    }
+
+    &__heading {
+      text-align: center;
+    }
+
+    &__list {
+      margin-top: calc-rem(40);
+      display: grid;
+      grid-template-columns: auto auto auto;
+      gap: calc-rem(40);
+
+      @screen md {
+        margin-top: calc-rem(30);
+        grid-template-columns: auto;
+        gap: calc-rem(30);
+      }
+
+      @screen sm {
+        margin-top: calc-rem(20);
+        grid-template-columns: auto;
+        gap: calc-rem(20);
+      }
+
+      &__item {
+        background-color: theme('colors.primary');
+        padding: calc-rem(40);
+        border-radius: calc-rem(8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        @screen md {
+          padding: calc-rem(30);
+        }
+
+        @screen sm {
+          padding: calc-rem(20);
+        }
+
+        &__price {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          flex: 1;
+          gap: calc-rem(8);
+          padding-bottom: calc-rem(40);
+          border-bottom: 1px solid theme('colors.gray-3');
+
+          @screen md {
+            padding-bottom: calc-rem(30);
+          }
+
+          @screen sm {
+            padding-bottom: calc-rem(20);
+          }
+        }
+
+        &__content {
+          margin-top: calc-rem(40);
+
+          @screen md {
+            margin-top: calc-rem(30);
+          }
+
+          @screen sm {
+            margin-top: calc-rem(20);
+          }
+
+          &__text {
+            display: flex;
+            align-items: center;
+
+            &:not(:last-child) {
+              margin-bottom: calc-rem(16);
+            }
+          }
+        }
+      }
+    }
+
+    &__btn {
+      margin-top: calc-rem(40);
+
+      @screen md {
+        margin-top: calc-rem(30);
+      }
+
+      @screen sm {
+        margin-top: calc-rem(20);
+      }
+    }
+  }
+}

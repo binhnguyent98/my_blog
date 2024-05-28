@@ -2,5 +2,8 @@
   "menu": {
     "post": "Posts",
     "category": "Categories"
+  },
+  "info": {
+    "name": "Nguyen Thanh Binh"
   }
 }

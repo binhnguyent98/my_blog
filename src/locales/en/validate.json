@@ -4,6 +4,8 @@
     "required_number": "{{field}} is required",
     "required_obj": "{{field}} is required",
     "required_ar": "{{field}} is required",
+    "maxLength": "{{field}} is maximum {{length}} characters",
+    "minLength": "{{field}} is min {{length}} characters",
     "is_half_size": ""
   }
 }

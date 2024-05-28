@@ -4,7 +4,7 @@ import { PropsWithChildren } from 'react';
 import { RenderEmpty } from '@/components/renderEmpty';
 
 export const ConfigAntd = ({ children }: PropsWithChildren) => {
-  const defaultHeightControl = 30;
+  const defaultHeightControl = 46;
 
   const theme: ThemeConfig = {
     components: {

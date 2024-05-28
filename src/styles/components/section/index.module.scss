@@ -1,0 +1,12 @@
+@import '../../common/function';
+
+.app-section {
+  &__content {
+    padding: calc-rem(0, 40);
+    background-color: theme('colors.secondary');
+
+    @screen sm {
+      padding: calc-rem(0, 20);
+    }
+  }
+}

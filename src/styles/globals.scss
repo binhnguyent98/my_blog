@@ -1,7 +1,9 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
-@import "common/nprocess-bar";
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import 'tailwindcss/screens';
+@import 'common/nprocess-bar';
+@import 'common/global';
 
 h2 {
   font-size: 32;
@@ -15,6 +17,29 @@ h3 {
   font-weight: bold;
 }
 
+h4 {
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: bold;
+}
+
+.caption-1 {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
 body {
-  color: theme("colors.white");
+  color: theme('colors.white');
+}
+
+.heading-4-bold {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.header-3-bold {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.3;
 }

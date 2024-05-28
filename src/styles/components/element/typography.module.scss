@@ -1,0 +1,94 @@
+@import '../../common/function';
+
+.app-typography {
+  &:global(.ant-typography) {
+    margin-bottom: 0;
+  }
+
+  &__variant {
+    &--big {
+      font-size: calc-rem(48);
+      line-height: 1.5;
+
+      @screen sm {
+        font-size: calc-rem(32);
+      }
+
+      @screen xs {
+        font-size: calc-rem(28);
+      }
+    }
+
+    &--large {
+      font-size: calc-rem(40);
+      line-height: 1.5;
+    }
+
+    &--medium {
+      font-size: calc-rem(32);
+      line-height: 1.5;
+    }
+
+    &--normal {
+      font-size: calc-rem(28);
+      line-height: 1.5;
+
+      @screen xs {
+        font-size: calc-rem(20);
+      }
+    }
+
+    &--body2 {
+      font-size: calc-rem(24);
+      line-height: 1.5;
+
+      @screen xs {
+        font-size: calc-rem(16);
+      }
+    }
+
+    &--sub-normal {
+      font-size: calc-rem(22);
+      line-height: 1.5;
+    }
+
+    &--large-body {
+      font-size: calc-rem(18);
+      line-height: 1.5;
+
+      @screen xs {
+        font-size: calc-rem(14);
+      }
+    }
+
+    &--body {
+      font-size: calc-rem(16);
+      line-height: 1.5;
+
+      @screen xs {
+        font-size: calc-rem(14);
+      }
+    }
+
+    &--note {
+      font-size: calc-rem(14);
+      line-height: 1.5;
+    }
+
+    &--small {
+      font-size: calc-rem(12);
+      line-height: 1.5;
+    }
+
+    &--minion {
+      font-size: calc-rem(8);
+      line-height: 1.5;
+    }
+  }
+
+  &__color {
+    &--white {
+      color: theme('colors.white');
+    }
+  }
+}

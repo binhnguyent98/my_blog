@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import { PropsWithChildren } from 'react';
 
 import { SIZE_CONTAINER_DEFAULT } from '@/constants/default';
@@ -8,9 +9,9 @@ type Props = PropsWithChildren & {
   size?: SizeScreen;
 };
 
-export const Container = ({ children, size }: Props) => {
+export const Container = ({ children, size, className }: Props) => {
   return (
-    <div className={styles['app-container']}>
+    <div className={clsx(styles['app-container'], className)}>
       <div className={styles[`app-container__${size || SIZE_CONTAINER_DEFAULT}`]}>{children}</div>
     </div>
   );

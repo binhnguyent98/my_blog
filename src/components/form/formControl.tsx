@@ -1,4 +1,5 @@
 import { Form, FormItemProps } from 'antd';
+import { clsx } from 'clsx';
 import { Controller, ControllerProps, FieldPath, FieldValues } from 'react-hook-form';
 
 import { FormControlItem } from './components/formControlItem';
@@ -11,6 +12,7 @@ export enum LAYOUT_TYPE {
 
 type Classes = {
   classes?: {
+    root?: string;
     label?: string;
     item?: string;
   };
@@ -36,7 +38,7 @@ export const FormControl = <TFieldValues extends FieldValues = FieldValues, TNam
   const colon = props.colon ?? true;
 
   return (
-    <Form.Item required={false} label={false} colon={false} className="mb-1">
+    <Form.Item required={false} label={false} colon={false} className={clsx('mb-1', classes?.root)}>
       <LayoutForm label={label} layout={layout} colon={colon} required={required} className={classes?.label}>
         <Controller
           {...rest}

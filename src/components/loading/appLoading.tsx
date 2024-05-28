@@ -4,6 +4,8 @@ import { useMemo } from 'react';
 
 import styles from '@/styles/components/loading/app-loading.module.scss';
 
+import { Element } from '../custom';
+
 type Props = {
   appLoader: boolean;
   children: React.ReactElement;
@@ -30,7 +32,7 @@ export const AppLoading = ({ appLoader, children }: Props) => {
           <div className={styles['app-loading__loader']}>
             <div className={styles['app-loading__loader__inner']} />
           </div>
-          <h3 className={styles['app-loading__title']}>{t('label.loading')}</h3>
+          <Element.Typography className={styles['app-loading__title']}>{t('label.loading')}</Element.Typography>
         </div>
       </div>
       <div className={styles['app-page']}>{children}</div>

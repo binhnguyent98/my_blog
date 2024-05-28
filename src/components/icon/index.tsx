@@ -14,13 +14,11 @@ type Props = {
 };
 
 export const Icon = (props: Props) => {
-  const { name, className } = props;
+  const { name } = props;
 
   if (name in ReactIcon) {
     const keyName = name as keyof typeof ReactIcon;
     const render = ReactIcon[keyName];
-
-    console.log(render.props);
 
     return render;
   }

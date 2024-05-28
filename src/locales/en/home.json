@@ -1,11 +1,76 @@
 {
-  "menu": {
-    "post": "Posts",
-    "category": "Categories"
+  "topSection": {
+    "info": {
+      "name": "Nguyen Thanh Binh",
+      "position": "Web developer",
+      "about": "<0>Hi, My name's <1>Binh</1><3/>I'm a engineer <2>Front-end and Back-end</2> Developer.<3/>I'm from Quang Nam - VietNam</0>",
+      "status": {
+        "numberOfExpired": "3.5",
+        "yearOfExpired": "Years of\n Experance",
+        "numberProject": "120",
+        "project": "Project\nin years"
+      }
+    },
+    "btnDownloadCv": "Download C.V"
   },
-  "table": {
-    "title": "Title",
-    "description": "Description",
-    "category": "Category"
+  "outService": {
+    "menu": {
+      "home": "Home",
+      "service": "Services",
+      "about": "About",
+      "contact": "Contact",
+      "blog": "Blog"
+    },
+    "content": {
+      "title": "OUR SERVICES",
+      "subTitle": "OUR SERVICES",
+      "services": {
+        "webDesign": "Web desing",
+        "webDesignPreview": "There are many variations of passages of available but to the majority have suffered but the into majority.",
+        "solution": "Technology Solution",
+        "solutionPreview": "There are many variations of passages of available but to the majority have suffered but the into majority.",
+        "uxUi": "UX/UI design",
+        "uxUiPreview": "There are many variations of passages of available but to the majority have suffered but the into majority."
+      }
+    }
+  },
+  "ourSkill": {
+    "title": "Our skills",
+    "subTitle": "Our skills",
+    "skill": {
+      "uxUi": "UI / UX Design",
+      "code": "Development",
+      "graphic": "Graphic Design",
+      "wp": "WordPress"
+    }
+  },
+  "ourBlog": {
+    "title": "Our Blog",
+    "subTitle": "Our Blog",
+    "label": {
+      "viewAll": "View All Posts",
+      "readMore": "Read More"
+    }
+  },
+  "bestSelling": {
+    "title": "Best Selling",
+    "subTitle": "Best Selling",
+    "label": {
+      "viewAll": "View All Posts",
+      "readMore": "Read More"
+    },
+    "btnGetStated": "Get Started"
+  },
+  "contact": {
+    "title": "GET IN TOUCH",
+    "subTitle": "Let is make your brand brilliant!",
+    "note": "If you would like to work with us or just want to get in touch, we’d love to hear from you!",
+    "fields": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message"
+    },
+    "submit": "Send contact"
   }
 }
