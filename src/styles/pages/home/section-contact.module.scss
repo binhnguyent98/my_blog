@@ -1,7 +1,7 @@
-@import '../../common/function';
+@import "../../common/function";
 
 .section-contact {
-  border-top: 1px solid theme('colors.gray-3');
+  border-top: 1px solid theme("colors.gray-3");
 
   &__content {
     display: flex;
@@ -10,11 +10,15 @@
     @apply space-x-8;
 
     @screen md {
+      @apply space-x-0;
+      @apply space-y-6;
+
       flex-direction: column;
       padding: calc-rem(30, 0);
     }
 
     @screen sm {
+      @apply space-y-4;
       padding: calc-rem(20, 0);
     }
 
@@ -60,18 +64,18 @@
       & input,
       textarea {
         background-color: transparent;
-        color: theme('colors.white');
-        border-color: theme('colors.gray-3');
+        color: theme("colors.white");
+        border-color: theme("colors.gray-3");
         transition: all 0.4s;
 
         &:hover,
         &:active,
         &:focus {
-          border-color: theme('colors.white');
+          border-color: theme("colors.white");
         }
 
         &::placeholder {
-          color: theme('colors.gray-3');
+          color: theme("colors.gray-3");
           transition: all 0.4s;
         }
       }

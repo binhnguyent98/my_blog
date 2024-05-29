@@ -18,7 +18,7 @@ export const AppLoading = ({ appLoader, children }: Props) => {
       return new Promise((resolve) => {
         setTimeout(() => {
           resolve(true);
-        }, 3000);
+        }, 4000);
       });
     }
 
@@ -35,7 +35,7 @@ export const AppLoading = ({ appLoader, children }: Props) => {
           <Element.Typography className={styles['app-loading__title']}>{t('label.loading')}</Element.Typography>
         </div>
       </div>
-      <div className={styles['app-page']}>{children}</div>
+      {loader && <div className={styles['app-page']}>{children}</div>}
     </>
   );
 };
