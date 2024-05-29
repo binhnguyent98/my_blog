@@ -83,7 +83,7 @@
     right: -50%;
   }
 
-  #{$app-selector}__overplay {
+  #{app-selector}__overplay {
     opacity: 0;
     transition: 0.2s;
   }
