@@ -1,10 +1,18 @@
-@import '../../common/function';
+@import "../../common/function";
 
 .app-layout-guest-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: calc-rem(30, 0);
+
+  @screen md {
+    padding: calc-rem(20, 0);
+  }
+
+  @screen sm {
+    padding: calc-rem(16, 0);
+  }
 
   &__social {
     display: flex;
@@ -24,10 +32,10 @@
       transition: all 0.6s;
 
       &:hover {
-        background-color: theme('colors.white');
+        background-color: theme("colors.white");
 
         & > svg {
-          color: theme('colors.primary');
+          color: theme("colors.primary");
         }
       }
     }
@@ -38,14 +46,6 @@
 
     @screen md {
       display: none;
-    }
-  }
-
-  &__toggle-sp {
-    display: none;
-
-    @screen md {
-      display: block;
     }
   }
 }

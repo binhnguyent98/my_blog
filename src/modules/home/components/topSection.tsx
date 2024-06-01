@@ -4,14 +4,15 @@ import useTranslation from 'next-translate/useTranslation';
 
 import { Container, Section, Thumbnail } from '@/components';
 import { Element } from '@/components/custom';
+import { SECTION_TAG } from '@/layout/guest/menuData';
 import styles from '@/styles/pages/home/index.module.scss';
 
 export const TopSection = () => {
   const { t } = useTranslation('home');
 
   return (
-    <div>
-      <Section className="rounded-tl-xl rounded-tr-xl rounded-br-xl overflow-hidden">
+    <div id={SECTION_TAG.TOP}>
+      <Section className="rounded-tl-xl rounded-tr-xl rounded-br-xl overflow-hidden md:rounded-bl-xl">
         <div className={styles['home-page']}>
           <div className={styles['home-page__thumbnail']}>
             <div className={styles['home-page__thumbnail__box']}>

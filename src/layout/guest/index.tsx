@@ -1,3 +1,5 @@
+import clsx from 'clsx';
+
 import styles from '@/styles/layout/guest/index.module.scss';
 
 import { FixedBtnComponent } from './components/fixedBtn';
@@ -6,7 +8,7 @@ import { Header } from './components/header';
 
 export const GuestLayout = ({ children }: { children: React.ReactElement }) => {
   return (
-    <div className={styles['app-layout-guest']}>
+    <div className={clsx(styles['app-layout-guest'], 'relative')}>
       <FixedBtnComponent />
       <div className={styles['app-layout-guest__lines']}>
         <span />

@@ -25,5 +25,8 @@
     "ja": "Japan",
     "en": "English"
   },
-  "footer": "Copyright by Coldzy"
+  "footer": "Copyright by Coldzy",
+  "header": {
+    "menu": "Top page"
+  }
 }

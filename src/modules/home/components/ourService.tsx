@@ -3,6 +3,7 @@ import { useMemo } from 'react';
 
 import { Container, Section, Thumbnail } from '@/components';
 import { Element } from '@/components/custom';
+import { getMenuData, SECTION_TAG } from '@/layout/guest/menuData';
 import styles from '@/styles/pages/home/section-our-service.module.scss';
 
 type MenuProp = {
@@ -12,31 +13,7 @@ type MenuProp = {
 
 export const OurService = () => {
   const { t } = useTranslation('home');
-  const menu = useMemo(
-    (): MenuProp[] => [
-      {
-        label: t('outService.menu.home'),
-        sectionTag: 'home',
-      },
-      {
-        label: t('outService.menu.service'),
-        sectionTag: 'service',
-      },
-      {
-        label: t('outService.menu.about'),
-        sectionTag: 'about',
-      },
-      {
-        label: t('outService.menu.contact'),
-        sectionTag: 'contact',
-      },
-      {
-        label: t('outService.menu.blog'),
-        sectionTag: 'blog',
-      },
-    ],
-    []
-  );
+  const menu = useMemo((): MenuProp[] => getMenuData(t), []);
 
   const services = useMemo(
     () => [
@@ -65,7 +42,7 @@ export const OurService = () => {
   );
 
   return (
-    <div className="-mt-2 md:mt-10">
+    <div id={SECTION_TAG.HOME} className="-mt-2 md:mt-10">
       <Container>
         <div className={styles['section-our-service__bar']}>
           <div />

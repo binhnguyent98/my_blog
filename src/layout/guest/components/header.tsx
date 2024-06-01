@@ -4,12 +4,14 @@ import { useMemo } from 'react';
 import { FaFacebook } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa6';
 import { PiTelegramLogoLight } from 'react-icons/pi';
-import { RiMenuFoldLine } from 'react-icons/ri';
 
 import { Container, Thumbnail } from '@/components';
 import { Element } from '@/components/custom';
 import { EMAIL_GLOBAL, SOCIAL_LINK } from '@/constants/app';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
 import style from '@/styles/layout/guest/header.module.scss';
+
+import { MenuSmartPhone } from './menuSp';
 
 type SocialType = {
   icon: React.ReactNode;
@@ -18,6 +20,7 @@ type SocialType = {
 };
 
 export const Header = () => {
+  const isMobile = useMediaQuery('(max-width: 980px)');
   const socialInfo = useMemo(
     (): SocialType[] => [
       {
@@ -37,8 +40,8 @@ export const Header = () => {
   );
 
   return (
-    <Container>
-      <div className={style['app-layout-guest-header']}>
+    <Container className="relative">
+      <div className={clsx(style['app-layout-guest-header'])}>
         <div className={style['app-layout-guest-header__logo']}>
           <Thumbnail src="/logo/logo.png" width={40} className="bg-red" height={40} />
         </div>
@@ -49,14 +52,13 @@ export const Header = () => {
             </Link>
           ))}
         </div>
-        <Link href={`mailto:${EMAIL_GLOBAL}`} className={clsx(style['app-layout-guest-header__email'], 'heading-4-bold')}>
-          <Element.Typography size="small">{EMAIL_GLOBAL}</Element.Typography>
-        </Link>
-        <div className={style['app-layout-guest-header__toggle-sp']}>
-          <Element.Button type="text">
-            <RiMenuFoldLine color="white" size={26} />
-          </Element.Button>
-        </div>
+        {!isMobile ? (
+          <Link href={`mailto:${EMAIL_GLOBAL}`} className={clsx(style['app-layout-guest-header__email'], 'heading-4-bold')}>
+            <Element.Typography size="small">{EMAIL_GLOBAL}</Element.Typography>
+          </Link>
+        ) : (
+          <MenuSmartPhone />
+        )}
       </div>
     </Container>
   );

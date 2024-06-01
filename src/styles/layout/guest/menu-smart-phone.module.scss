@@ -1,0 +1,51 @@
+@import "../../common/function";
+
+.guest-layout-menu-smart-phone {
+  transition: all 0.3s;
+  background-color: transparent;
+
+  &__drawer {
+    &__header {
+      padding: calc-rem(16) !important;
+      border-color: theme("colors.gray-2") !important;
+
+      :global(.ant-drawer-header-title) {
+        flex-direction: row-reverse !important;
+      }
+    }
+
+    &__content {
+      background-color: theme("colors.primary") !important;
+    }
+
+    &__mask {
+      backdrop-filter: "blur(15px)" !important;
+    }
+
+    &__body {
+      padding: 0 !important;
+    }
+  }
+
+  &__menu {
+    &__list {
+      & > li {
+        & > div {
+          padding: calc-rem(12, 16);
+        }
+
+        transition: all 0.3s;
+
+        &:hover,
+        &:active,
+        &:focus {
+          background-color: theme("colors.secondary");
+        }
+
+        &:not(:last-child) {
+          border-bottom: 1px solid theme("colors.gray-2");
+        }
+      }
+    }
+  }
+}

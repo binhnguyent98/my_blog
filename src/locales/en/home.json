@@ -15,11 +15,13 @@
   },
   "outService": {
     "menu": {
-      "home": "Home",
+      "home": "Service",
+      "skill": "Skill",
       "service": "Services",
       "about": "About",
       "contact": "Contact",
-      "blog": "Blog"
+      "blog": "Blog",
+      "selling": "Best Selling"
     },
     "content": {
       "title": "OUR SERVICES",
