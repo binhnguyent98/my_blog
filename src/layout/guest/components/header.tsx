@@ -21,6 +21,8 @@ type SocialType = {
 
 export const Header = () => {
   const isMobile = useMediaQuery('(max-width: 980px)');
+  const isXs = useMediaQuery('(max-width: 480px)');
+
   const socialInfo = useMemo(
     (): SocialType[] => [
       {
@@ -43,7 +45,7 @@ export const Header = () => {
     <Container className="relative">
       <div className={clsx(style['app-layout-guest-header'])}>
         <div className={style['app-layout-guest-header__logo']}>
-          <Thumbnail src="/logo/logo.png" width={40} className="bg-red" height={40} />
+          <Thumbnail src="/logo/logo.png" width={!isXs ? 40 : 25} className="bg-red" height={!isXs ? 40 : 25} />
         </div>
         <div className={style['app-layout-guest-header__social']}>
           {socialInfo?.map((item, index) => (

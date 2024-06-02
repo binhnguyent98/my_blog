@@ -3,7 +3,7 @@ type Props<T> = {
   wrapperScroll?: string;
 };
 
-export const useScrollSection = <T extends string>({ listTagId, wrapperScroll }: Props<T>) => {
+export const useScrollSection = <T extends string>({ wrapperScroll }: Props<T>) => {
   const wrapperElement = wrapperScroll ? document.querySelector(wrapperScroll) : window;
   // const elSection = useMemo(() => listTagId?.map((item) => document.getElementById(item)), [listTagId]);
 

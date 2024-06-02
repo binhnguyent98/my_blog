@@ -33,7 +33,7 @@ export const MenuSmartPhone = () => {
   };
 
   return (
-    <div className={clsx(style['guest-layout-menu-smart-phone'], 'md:fixed md:top-5 md:right-[16px] md:bg-primary md:z-50')}>
+    <div className={style['guest-layout-menu-smart-phone']}>
       <Element.Button type="text" onClick={() => setOpenDrawer((prev) => !prev)}>
         <MdMenuOpen color="white" size={32} className={clsx(openDrawer && 'rotate-180', 'bg-primary p-1 rounded-lg')} />
       </Element.Button>

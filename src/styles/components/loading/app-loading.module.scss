@@ -1,4 +1,4 @@
-@import "common/function";
+@import 'common/function';
 
 .app-loading {
   $app-selector: &;
@@ -14,7 +14,7 @@
 
   &::before,
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     width: 50%;
     height: 100%;
@@ -36,7 +36,7 @@
   }
 
   &__title {
-    color: theme("colors.white");
+    color: theme('colors.white');
   }
 
   &__overplay {
@@ -52,7 +52,7 @@
   &__loader {
     width: calc-rem(60);
     height: calc-rem(60);
-    border: 3px solid theme("colors.white");
+    border: 3px solid theme('colors.white');
     border-bottom: 3px solid transparent;
     border-radius: 50%;
     position: relative;

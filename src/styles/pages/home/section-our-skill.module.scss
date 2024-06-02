@@ -1,7 +1,7 @@
-@import "../../common/function";
+@import '../../common/function';
 
 .section-our-skill {
-  border-top: 1px solid theme("colors.gray-3");
+  border-top: 1px solid theme('colors.gray-3');
 
   &__content {
     padding: calc-rem(100, 0);
@@ -54,7 +54,7 @@
         &__item {
           padding: calc-rem(30);
           border-radius: calc-rem(10);
-          border: 1px solid theme("colors.gray-3");
+          border: 1px solid theme('colors.gray-3');
           display: flex;
           align-items: center;
           gap: calc-rem(20);
@@ -67,7 +67,7 @@
             right: calc-rem(10);
             padding: calc-rem(4, 6);
             border-radius: calc-rem(10);
-            border: 1px solid theme("colors.gray-3");
+            border: 1px solid theme('colors.gray-3');
           }
 
           &__bottom-bar {
@@ -77,14 +77,14 @@
             bottom: 0;
             left: 0;
             border-radius: 2px;
-            background: theme("colors.gray-4");
+            background: theme('colors.gray-4');
             overflow: hidden;
 
             &::before {
-              content: "";
+              content: '';
               height: 100%;
               position: absolute;
-              background: theme("colors.white");
+              background: theme('colors.white');
             }
           }
         }
@@ -109,7 +109,7 @@
 
       &__item {
         padding: calc-rem(40);
-        background: theme("colors.primary");
+        background: theme('colors.primary');
         border-radius: calc-rem(10);
 
         @screen md {

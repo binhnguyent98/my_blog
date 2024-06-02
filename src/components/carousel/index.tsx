@@ -4,6 +4,6 @@ type Props = CarouselProps & {
   isCarousel?: boolean;
 };
 
-export const Carousel = ({ isCarousel = true, ...rest }: Props) => {
+export const Carousel = ({ ...rest }: Props) => {
   return <Carousel {...rest} />;
 };

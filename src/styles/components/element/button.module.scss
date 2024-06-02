@@ -1,4 +1,4 @@
-@import "common/function";
+@import 'common/function';
 
 .button {
   height: unset;
@@ -8,32 +8,33 @@
 
   &__render {
     position: relative;
+
     // z-index: 2;
   }
 
   &__type {
     &__primary {
-      background: theme("colors.primary");
-      color: theme("colors.white");
+      background: theme('colors.primary');
+      color: theme('colors.white');
     }
 
     &__danger {
-      background: theme("colors.error");
-      color: theme("colors.white");
+      background: theme('colors.error');
+      color: theme('colors.white');
     }
 
     &__outlined {
       font-weight: normal;
       background: transparent;
-      color: theme("colors.white");
-      border: 1px solid theme("colors.gray-1");
+      color: theme('colors.white');
+      border: 1px solid theme('colors.gray-1');
       transition: all 0.4s;
       position: relative;
       overflow: hidden;
 
       &::before {
         position: absolute;
-        content: "";
+        content: '';
         left: 0;
         top: 0;
         width: 0;
@@ -42,13 +43,13 @@
       }
 
       &:hover {
-        border-color: theme("colors.white") !important;
-        color: theme("colors.primary") !important;
+        border-color: theme('colors.white') !important;
+        color: theme('colors.primary') !important;
 
         &::before {
           width: 100%;
-          border: 1px solid theme("colors.white");
-          background-color: theme("colors.white");
+          border: 1px solid theme('colors.white');
+          background-color: theme('colors.white');
         }
       }
     }
@@ -56,20 +57,20 @@
     &__line-prefix {
       font-weight: bold;
       background: transparent;
-      color: theme("colors.white");
-      border: 1px solid theme("colors.gray-1");
+      color: theme('colors.white');
+      border: 1px solid theme('colors.gray-1');
       transition: all 0.5s;
       position: relative;
       overflow: hidden;
 
       &::before {
         position: absolute;
-        content: "";
+        content: '';
         left: 0;
         top: 0;
         bottom: 0;
         width: calc-rem(6);
-        background-color: theme("colors.green-1");
+        background-color: theme('colors.green-1');
         border-left: 1px solid white;
         transition: all 0.4s;
       }
@@ -77,8 +78,8 @@
       &:hover,
       &:active,
       &:focus {
-        color: theme("colors.primary") !important;
-        border: 1px solid theme("colors.white") !important;
+        color: theme('colors.primary') !important;
+        border: 1px solid theme('colors.white') !important;
 
         &::before {
           width: 100%;

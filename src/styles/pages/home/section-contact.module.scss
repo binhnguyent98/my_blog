@@ -1,7 +1,7 @@
-@import "../../common/function";
+@import '../../common/function';
 
 .section-contact {
-  border-top: 1px solid theme("colors.gray-3");
+  border-top: 1px solid theme('colors.gray-3');
   border-bottom-left-radius: calc-rem(10);
   border-bottom-right-radius: calc-rem(10);
   overflow: hidden;
@@ -22,6 +22,7 @@
 
     @screen sm {
       @apply space-y-4;
+
       padding: calc-rem(20, 0);
     }
 
@@ -67,18 +68,18 @@
       & input,
       textarea {
         background-color: transparent;
-        color: theme("colors.white");
-        border-color: theme("colors.gray-3");
+        color: theme('colors.white');
+        border-color: theme('colors.gray-3');
         transition: all 0.4s;
 
         &:hover,
         &:active,
         &:focus {
-          border-color: theme("colors.white");
+          border-color: theme('colors.white');
         }
 
         &::placeholder {
-          color: theme("colors.gray-3");
+          color: theme('colors.gray-3');
           transition: all 0.4s;
         }
       }

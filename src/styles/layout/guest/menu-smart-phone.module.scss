@@ -1,13 +1,29 @@
-@import "../../common/function";
+@import '../../common/function';
 
 .guest-layout-menu-smart-phone {
   transition: all 0.3s;
   background-color: transparent;
 
+  @screen md {
+    position: fixed;
+    top: calc-rem(24);
+    right: calc-rem(96);
+    z-index: 50;
+  }
+
+  @screen sm {
+    right: calc-rem(36);
+  }
+
+  @screen xs {
+    right: calc-rem(16);
+    top: calc-rem(14);
+  }
+
   &__drawer {
     &__header {
       padding: calc-rem(16) !important;
-      border-color: theme("colors.gray-2") !important;
+      border-color: theme('colors.gray-2') !important;
 
       :global(.ant-drawer-header-title) {
         flex-direction: row-reverse !important;
@@ -15,11 +31,11 @@
     }
 
     &__content {
-      background-color: theme("colors.primary") !important;
+      background-color: theme('colors.primary') !important;
     }
 
     &__mask {
-      backdrop-filter: "blur(15px)" !important;
+      backdrop-filter: 'blur(15px)' !important;
     }
 
     &__body {
@@ -39,11 +55,11 @@
         &:hover,
         &:active,
         &:focus {
-          background-color: theme("colors.secondary");
+          background-color: theme('colors.secondary');
         }
 
         &:not(:last-child) {
-          border-bottom: 1px solid theme("colors.gray-2");
+          border-bottom: 1px solid theme('colors.gray-2');
         }
       }
     }
