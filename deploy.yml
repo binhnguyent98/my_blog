@@ -1,0 +1,6 @@
+version: 3.2
+services:
+  blog:
+    image: blog
+    ports:
+      - 3000:3000
