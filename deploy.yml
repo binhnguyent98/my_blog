@@ -1,6 +1,6 @@
 version: '3.8'
 services:
   app:
-    image: ghcr.io/blog:latest
+    image: ghcr.io/binhnguyent98/my_blog:latest
     ports:
       - "3000:3000"
