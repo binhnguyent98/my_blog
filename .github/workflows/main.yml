@@ -18,7 +18,7 @@ jobs:
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v2
         with:
-          registry: http://108.61.187.39
+          registry: blog_coldzy
           username: '${{ github.actor }}'
           password: '${{ secrets.GITHUB_TOKEN }}'
 
