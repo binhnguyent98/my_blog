@@ -1,6 +1,6 @@
-version: 3.2
+version: '3.8'
 services:
   blog:
     image: blog
     ports:
-      - 3000:3000
+      - "3000:3000"
