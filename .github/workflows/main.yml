@@ -26,3 +26,7 @@ jobs:
         run: |
           docker tag app:latest blog
           docker push blog
+
+      - name: Send portainer webhook
+        run: |
+          curl --insecure --connect-timeout 60 -X POST ${{ secrets.PORTAINER_STACK_WEBHOOK }}
