@@ -24,7 +24,7 @@ jobs:
 
       - name: Push image to GitHub Container Registry
         run: |
-          docker tag app:latest ghcr.io/${{ github.repository }}:latest
+          docker tag ghcr.io/${{ github.repository }}:latest
           docker push ghcr.io/${{ github.repository }}:latest
 
       - name: Send portainer webhook
