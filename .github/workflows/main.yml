@@ -18,14 +18,14 @@ jobs:
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v2
         with:
-          registry: 108.61.187.39
+          registry: ghcr.io
           username: '${{ github.actor }}'
           password: '${{ secrets.GITHUB_TOKEN }}'
 
       - name: Push image to GitHub Container Registry
         run: |
-          docker tag app:latest blog
-          docker push blog
+          docker tag app:latest ghcr.io/blog:latest
+          docker push ghcr.io/blog:latest
 
       - name: Send portainer webhook
         run: |
