@@ -3,16 +3,20 @@ import { useMemo } from 'react';
 
 import { Container, Section, Thumbnail } from '@/components';
 import { Element } from '@/components/custom';
+import { useScrollSection } from '@/hooks/useScrollSection';
 import { getMenuData, SECTION_TAG } from '@/layout/guest/menuData';
 import styles from '@/styles/pages/home/section-our-service.module.scss';
 
 type MenuProp = {
   label: React.ReactNode;
-  sectionTag: string;
+  sectionTag: SECTION_TAG;
 };
 
 export const OurService = () => {
   const { t } = useTranslation('home');
+  const { onScrollToSection } = useScrollSection<SECTION_TAG>({
+    listTagId: [SECTION_TAG.HOME, SECTION_TAG.SKILL, SECTION_TAG.BLOG, SECTION_TAG.SELLING, SECTION_TAG.CONTACT],
+  });
   const menu = useMemo((): MenuProp[] => getMenuData(t), []);
 
   const services = useMemo(
@@ -49,7 +53,7 @@ export const OurService = () => {
           <div className={styles['section-our-service']}>
             <ul className={styles['section-our-service__list']}>
               {menu?.map((item, index) => (
-                <li key={index}>
+                <li key={index} onClick={() => onScrollToSection(item.sectionTag)}>
                   <Element.Typography size="body">{item.label}</Element.Typography>
                 </li>
               ))}
@@ -63,7 +67,7 @@ export const OurService = () => {
             {t('outService.content.title')}
           </Element.Typography>
           <Element.Typography size="note" fontWeight="semibold" className={styles['section-our-service__content__sub-title']}>
-            {t('outService.content.title')}
+            {t('outService.content.subTitle')}
           </Element.Typography>
           <div className={styles['section-our-service__content__box']}>
             {services?.map((item, index) => (

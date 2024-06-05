@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useMemo } from 'react';
 import { FaFacebook } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa6';
-import { PiTelegramLogoLight } from 'react-icons/pi';
+import { RiSkypeFill } from 'react-icons/ri';
 
 import { Container, Thumbnail } from '@/components';
 import { Element } from '@/components/custom';
@@ -26,8 +26,8 @@ export const Header = () => {
   const socialInfo = useMemo(
     (): SocialType[] => [
       {
-        icon: <PiTelegramLogoLight />,
-        link: SOCIAL_LINK.TELEGRAM,
+        icon: <RiSkypeFill />,
+        link: SOCIAL_LINK.SKYPE,
       },
       {
         icon: <FaGithub />,
