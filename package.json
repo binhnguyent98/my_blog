@@ -2,6 +2,9 @@
   "name": "nextjs_v13",
   "version": "0.1.0",
   "private": true,
+  "publishConfig": {
+  "@binhxikeno2:registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
