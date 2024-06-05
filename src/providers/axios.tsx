@@ -12,9 +12,9 @@ export const AxiosProvider = ({ children }: PropsWithChildren) => {
   const token = useSelector((state) => state.auth.accessToken);
   const { onLogout, onRenewToken } = useAuthenticate();
 
-  if (!baseURL) {
-    throw new Error('Api url not found');
-  }
+  // if (!baseURL) {
+  //   throw new Error('Api url not found');
+  // }
 
   const axiosInstance = useMemo(() => {
     const instance = axios.create({
