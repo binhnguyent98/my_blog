@@ -2,12 +2,12 @@
   "topSection": {
     "info": {
       "name": "Nguyen Thanh Binh",
-      "position": "Web developer",
-      "about": "<0>Hi, My name's <1>Coldzy2</1><3/>I'm a engineer <2>Front-end and Back-end</2> Developer.<3/>I'm from Quang Nam - VietNam</0>",
+      "position": "Full-stack Developer",
+      "about": "<0>Hi, I'm <1>Coldzy</1><3/>I'm a software engineer <2>developer</2>.<3/>I guarantee to create a flawless website that fulfills all your requirements.</0>",
       "status": {
-        "numberOfExpired": "3.5",
+        "numberOfExpired": "4",
         "yearOfExpired": "Years of\n Experance",
-        "numberProject": "120",
+        "numberProject": "20",
         "project": "Project\nin years"
       }
     },
@@ -25,7 +25,7 @@
     },
     "content": {
       "title": "OUR SERVICES",
-      "subTitle": "OUR SERVICES",
+      "subTitle": "Wholehearted Service, Exceptional Experience",
       "services": {
         "webDesign": "Web desing",
         "webDesignPreview": "There are many variations of passages of available but to the majority have suffered but the into majority.",
