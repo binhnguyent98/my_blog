@@ -27,19 +27,26 @@
       "title": "OUR SERVICES",
       "subTitle": "Wholehearted Service, Exceptional Experience",
       "services": {
-        "webDesign": "Web desing",
-        "webDesignPreview": "There are many variations of passages of available but to the majority have suffered but the into majority.",
-        "solution": "Technology Solution",
+        "solution": "Ideal Solution",
+        "webDesign": "Web Coding",
+        "solutionPreviewIdeal": "With over 4 years of experience in website design, our team is dedicated to providing expert advice and creative solutions to help you develop outstanding products.",
+        "webDesignPreview": "Ready to take your website to the next level? Contact us now to discuss your project and discover how we can help you achieve your online goals. Let’s build something amazing together!.",
         "solutionPreview": "There are many variations of passages of available but to the majority have suffered but the into majority.",
         "uxUi": "UX/UI design",
-        "uxUiPreview": "There are many variations of passages of available but to the majority have suffered but the into majority."
+        "uxUiPreview": "We will deliver a completely unique website, fully equipped with desired features and updated to reflect the latest trends.",
+        "seoForSocial": "SEO for Social Media",
+        "seoForSocialPreview": "Our SEO for Social Media services are designed to enhance your profiles on platforms like TikTok and Facebook, driving organic growth and increasing your followers, likes, and overall engagement."
       }
     }
   },
   "ourSkill": {
-    "title": "My skills",
-    "subTitle": "Our skills",
+    "title": "Our skills",
+    "subTitle": "With more than 4 years in website design",
     "skill": {
+      "html": "HTML - CSS - JS",
+      "php": "PHP - Laravel - Wordpress",
+      "react": "ReactJs - NextJs",
+      "vuejs": "VueJs - NuxtJs",
       "uxUi": "UI / UX Design",
       "code": "Development",
       "graphic": "Graphic Design",
@@ -47,15 +54,15 @@
     }
   },
   "ourBlog": {
-    "title": "Our Blog",
-    "subTitle": "Our Blog",
+    "title": "Blog",
+    "subTitle": "Blog about technology",
     "label": {
       "viewAll": "View All Posts",
       "readMore": "Read More"
     }
   },
   "bestSelling": {
-    "title": "Best Selling",
+    "title": "Preferential Service",
     "subTitle": "Best Selling",
     "label": {
       "viewAll": "View All Posts",

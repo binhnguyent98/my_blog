@@ -1,4 +1,3 @@
-import clsx from 'clsx';
 import useTranslation from 'next-translate/useTranslation';
 import { useMemo } from 'react';
 
@@ -25,23 +24,23 @@ export const OurSkill = () => {
   const skills = useMemo(
     (): SkillItemType[] => [
       {
-        label: t('ourSkill.skill.uxUi'),
-        icon: '/images/pages/home/our-skill/s1.png',
+        label: t('ourSkill.skill.html'),
+        icon: '/images/pages/home/our-skill/html.png',
         percent: 80,
       },
       {
-        label: t('ourSkill.skill.code'),
-        icon: '/images/pages/home/our-skill/s2.png',
+        label: t('ourSkill.skill.php'),
+        icon: '/images/pages/home/our-skill/php.png',
         percent: 82,
       },
       {
-        label: t('ourSkill.skill.graphic'),
-        icon: '/images/pages/home/our-skill/s3.png',
+        label: t('ourSkill.skill.react'),
+        icon: '/images/pages/home/our-skill/react.png',
         percent: 80,
       },
       {
-        label: t('ourSkill.skill.wp'),
-        icon: '/images/pages/home/our-skill/s4.png',
+        label: t('ourSkill.skill.vuejs'),
+        icon: '/images/pages/home/our-skill/vuejs.png',
         percent: 82,
       },
     ],
@@ -51,27 +50,18 @@ export const OurSkill = () => {
   const awards = useMemo(
     (): RewardItemType[] => [
       {
-        label: '02x Designer Award',
-        pathImage: '/images/pages/home/our-skill/award1.png',
-        year: '2024',
+        label: 'Best employee of the year',
+        pathImage: '/images/pages/home/our-skill/award2.png',
+        year: '2022',
       },
       {
-        label: '02x Designer Award',
-        pathImage: '/images/pages/home/our-skill/award2.png',
-        year: '2024',
-      },
-      {
-        label: '02x Designer Award',
-        pathImage: '/images/pages/home/our-skill/award2.png',
-        year: '2024',
+        label: 'Winner of 3 hackathons at Hybrid Technologies.',
+        pathImage: '/images/pages/home/our-skill/hackathon.jpg',
+        year: '2023',
       },
     ],
     []
   );
-
-  const renderPercent = (percent: number) => {
-    return <div className={clsx(styles['section-our-skill__content__skill__list__item__bottom-bar'], `before:w-[${percent}%]`)} />;
-  };
 
   return (
     <div id={SECTION_TAG.SKILL}>
@@ -83,7 +73,7 @@ export const OurSkill = () => {
                 {t('ourSkill.title')}
               </Element.Typography>
               <Element.Typography size="note" className="mt-4">
-                {t('ourSkill.title')}
+                {t('ourSkill.subTitle')}
               </Element.Typography>
             </div>
             <div className={styles['section-our-skill__content__skill__list']}>
@@ -96,7 +86,7 @@ export const OurSkill = () => {
                   <Element.Typography size="small" fontWeight="bold" className={styles['section-our-skill__content__skill__list__item__percent']}>
                     {item.percent + '%'}
                   </Element.Typography>
-                  {renderPercent(item.percent)}
+                  <div className={styles['section-our-skill__content__skill__list__item__bottom-bar']} />
                 </div>
               ))}
             </div>

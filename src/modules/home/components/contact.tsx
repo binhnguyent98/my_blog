@@ -15,6 +15,9 @@ import { useForm } from '@/hooks';
 import { SECTION_TAG } from '@/layout/guest/menuData';
 import styles from '@/styles/pages/home/section-contact.module.scss';
 
+import { useLogic } from '../hooks/useLogic';
+import { contactValidate } from '../schema/contactValidate';
+
 type SocialType = {
   label: string;
   icon: React.ReactNode;
@@ -23,7 +26,10 @@ type SocialType = {
 
 export const Contact = () => {
   const { t } = useTranslation('home');
-  const { control } = useForm<ContactReqDto>();
+  const { onContact } = useLogic();
+  const { control, handleSubmit } = useForm<ContactReqDto>({
+    schema: contactValidate(t),
+  });
 
   const social = useMemo(
     (): SocialType[] => [
@@ -78,7 +84,7 @@ export const Contact = () => {
             </div>
           </div>
           <div className={styles['section-contact__content__form']}>
-            <Form>
+            <Form onFinish={handleSubmit(onContact)}>
               <div className="flex-1 flex space-x-6">
                 <CustomForm.Control
                   name="name"
@@ -108,14 +114,14 @@ export const Contact = () => {
                 }}
               />
               <CustomForm.Control
-                name="name"
+                name="message"
                 required
                 control={control}
                 render={({ field }) => {
                   return <Element.Input.Area rows={8} placeholder={t('contact.fields.message')} className="w-full" {...field} />;
                 }}
               />
-              <Element.Button type="line-prefix" size="md" className={clsx('w-full uppercase')}>
+              <Element.Button type="line-prefix" htmlType="submit" size="md" className={clsx('w-full uppercase')}>
                 {t('contact.submit')}
               </Element.Button>
             </Form>

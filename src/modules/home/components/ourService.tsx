@@ -22,14 +22,9 @@ export const OurService = () => {
   const services = useMemo(
     () => [
       {
-        title: t('outService.content.services.webDesign'),
-        preview: t('outService.content.services.webDesignPreview'),
+        title: t('outService.content.services.solution'),
+        preview: t('outService.content.services.solutionPreviewIdeal'),
         icon: '/images/pages/home/our-service/1.png',
-      },
-      {
-        title: t('outService.content.services.webDesign'),
-        preview: t('outService.content.services.webDesignPreview'),
-        icon: '/images/pages/home/our-service/2.png',
       },
       {
         title: t('outService.content.services.uxUi'),
@@ -39,6 +34,11 @@ export const OurService = () => {
       {
         title: t('outService.content.services.webDesign'),
         preview: t('outService.content.services.webDesignPreview'),
+        icon: '/images/pages/home/our-service/2.png',
+      },
+      {
+        title: t('outService.content.services.seoForSocial'),
+        preview: t('outService.content.services.seoForSocialPreview'),
         icon: '/images/pages/home/our-service/4.png',
       },
     ],
