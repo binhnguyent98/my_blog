@@ -24,10 +24,11 @@ type Props = {
   size?: (typeof TypographySizes)[number];
   color?: string;
   fontWeight?: string;
+  title?: string;
 };
 
 export const Typography = (props: Props) => {
-  const { children, className, size = 'normal', color = 'white', fontWeight } = props;
+  const { children, className, size = 'normal', color = 'white', fontWeight, title } = props;
 
   return (
     <TypographyAntd.Paragraph
@@ -38,6 +39,7 @@ export const Typography = (props: Props) => {
         fontWeight && `font-${fontWeight}`,
         className
       )}
+      title={title}
     >
       {children}
     </TypographyAntd.Paragraph>

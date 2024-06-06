@@ -58,7 +58,7 @@
           justify-content: center;
           align-items: center;
           width: 100%;
-          flex: 1;
+          height: calc-rem(40);
           gap: calc-rem(8);
           padding-bottom: calc-rem(40);
           border-bottom: 1px solid theme('colors.gray-3');

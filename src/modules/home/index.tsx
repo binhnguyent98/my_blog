@@ -11,8 +11,8 @@ export const HomePage: PageProps = () => {
       <TopSection />
       <OurService />
       <OurSkill />
-      <OurBlog />
       <BestSelling />
+      <OurBlog />
       <Contact />
     </>
   );

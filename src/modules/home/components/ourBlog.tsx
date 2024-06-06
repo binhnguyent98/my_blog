@@ -25,19 +25,20 @@ export const OurBlog = () => {
   const blogs = useMemo(
     (): BlogType[] => [
       {
-        thumbnail: '/images/pages/home/our-blog/1.jpg',
+        thumbnail: '/images/pages/home/our-blog/web2.jpg',
         date: '6 , AUG 2022',
-        title: '12 unique examples of portfolio websites.',
+        title:
+          'Web 2.0 represents a transformative era in the evolution of the internet, characterized by interactivity, collaboration, and user empowerment. By embracing these key highlights, businesses and individuals can leverage the full potential of Web 2.0 to connect, create, and thrive in the digital age.',
       },
       {
-        thumbnail: '/images/pages/home/our-blog/1.jpg',
-        date: '6 , AUG 2022',
-        title: '12 unique examples of portfolio websites.',
+        thumbnail: '/images/pages/home/our-blog/rocket.jpg',
+        date: '9 , June 2023',
+        title: 'Elevate Your Online Presence: Let Us Build Your Dream Website',
       },
       {
-        thumbnail: '/images/pages/home/our-blog/1.jpg',
-        date: '6 , AUG 2022',
-        title: '12 unique examples of portfolio websites.',
+        thumbnail: '/images/pages/home/our-blog/seo.jpg',
+        date: '2 , September 2024',
+        title: "Mastering SEO: Strategies to Boost Your Website's Visibility and Rank Higher",
       },
     ],
     []
@@ -64,14 +65,14 @@ export const OurBlog = () => {
           <div className={styles['section-our-blog__content__posts']}>
             {blogs?.map((item, index) => (
               <div key={index} className={styles['section-our-blog__content__posts__item']}>
-                <Thumbnail src={item.thumbnail} width={314} height={251} className="mx-auto w-full" />
+                <Thumbnail src={item.thumbnail} width={314} height={251} className="mx-auto w-full h-[400px] object-cover" />
                 <div className="px-4 -mt-6">
                   <div className={styles['section-our-blog__content__posts__item__content']}>
                     <Element.Typography size="small" className={styles['section-our-blog__content__posts__item__content__date']}>
                       <CiCalendarDate size={16} />
                       <span>{item.date}</span>
                     </Element.Typography>
-                    <Element.Typography fontWeight="semibold" size="body2" className="mt-3">
+                    <Element.Typography fontWeight="semibold" size="body2" title={item?.title} className="mt-3 line-clamp-3">
                       {item.title}
                     </Element.Typography>
                   </div>
