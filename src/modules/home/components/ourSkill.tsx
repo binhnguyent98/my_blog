@@ -67,7 +67,13 @@ export const OurSkill = () => {
     <div id={SECTION_TAG.SKILL}>
       <Section className={styles['section-our-skill']}>
         <div className={styles['section-our-skill__content']}>
-          <div className={styles['section-our-skill__content__skill']}>
+          <div
+            className={styles['section-our-skill__content__skill']}
+            data-aos="fade-right"
+            data-aos-duration="800"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+          >
             <div className={styles['section-our-skill__content__skill__heading']}>
               <Element.Typography fontWeight="bold" className="uppercase">
                 {t('ourSkill.title')}
@@ -91,7 +97,13 @@ export const OurSkill = () => {
               ))}
             </div>
           </div>
-          <div className={styles['section-our-skill__content__award']}>
+          <div
+            className={styles['section-our-skill__content__award']}
+            data-aos="zoom-in-right"
+            data-aos-duration="800"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+          >
             {awards?.map((item, index) => (
               <div key={index} className={styles['section-our-skill__content__award__item']}>
                 <Element.Typography fontWeight="semibold" size="note" className="text-right">

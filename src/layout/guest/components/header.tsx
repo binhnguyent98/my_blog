@@ -42,7 +42,7 @@ export const Header = () => {
   );
 
   return (
-    <Container className="relative">
+    <Container className="relative" data-aos="fade-up">
       <div className={clsx(style['app-layout-guest-header'])}>
         <div className={style['app-layout-guest-header__logo']}>
           <Thumbnail src="/logo/logo.png" width={!isXs ? 40 : 25} className="bg-red" height={!isXs ? 40 : 25} />

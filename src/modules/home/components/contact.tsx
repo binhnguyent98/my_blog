@@ -55,7 +55,7 @@ export const Contact = () => {
   return (
     <div id={SECTION_TAG.CONTACT}>
       <Section className={styles['section-contact']}>
-        <div className={styles['section-contact__content']}>
+        <div className={styles['section-contact__content']} data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
           <div className={styles['section-contact__content__content']}>
             <div className={styles['section-contact__content__txt']}>
               <Element.Typography fontWeight="bold" className={styles['section-contact__content__title']}>

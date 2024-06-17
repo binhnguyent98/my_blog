@@ -21,18 +21,18 @@
     &__list {
       margin-top: calc-rem(40);
       display: grid;
-      grid-template-columns: auto auto auto;
+      grid-template-columns: 1fr 1fr 1fr;
       gap: calc-rem(40);
 
       @screen md {
         margin-top: calc-rem(30);
-        grid-template-columns: auto;
+        grid-template-columns: 1fr;
         gap: calc-rem(30);
       }
 
       @screen sm {
         margin-top: calc-rem(20);
-        grid-template-columns: auto;
+        grid-template-columns: 1fr;
         gap: calc-rem(20);
       }
 
