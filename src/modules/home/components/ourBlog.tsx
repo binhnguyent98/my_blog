@@ -48,7 +48,7 @@ export const OurBlog = () => {
     <div id={SECTION_TAG.BLOG}>
       <Section className={styles['section-our-blog']}>
         <div className={styles['section-our-blog__content']}>
-          <div className={styles['section-our-blog__content__heading']}>
+          <div className={styles['section-our-blog__content__heading']} data-aos="zoom-out-right" data-aos-easing="linear" data-aos-duration="800">
             <div>
               <Element.Typography fontWeight="bold" className={styles['section-our-service__content__title']}>
                 {t('ourBlog.title')}
@@ -62,7 +62,7 @@ export const OurBlog = () => {
               <RiExternalLinkFill size={16} />
             </Link>
           </div>
-          <div className={styles['section-our-blog__content__posts']}>
+          <div className={styles['section-our-blog__content__posts']} data-aos="zoom-out-left" data-aos-easing="linear" data-aos-duration="800">
             {blogs?.map((item, index) => (
               <div key={index} className={styles['section-our-blog__content__posts__item']}>
                 <Thumbnail src={item.thumbnail} width={314} height={251} className="mx-auto w-full h-[400px] object-cover" />

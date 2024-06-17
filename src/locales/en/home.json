@@ -54,8 +54,8 @@
     }
   },
   "ourBlog": {
-    "title": "Blog",
-    "subTitle": "Blog about technology",
+    "title": "For Developer",
+    "subTitle": "Share some knowledge about development",
     "label": {
       "viewAll": "View All Posts",
       "readMore": "Read More"

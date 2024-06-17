@@ -25,21 +25,25 @@ export const OurService = () => {
         title: t('outService.content.services.solution'),
         preview: t('outService.content.services.solutionPreviewIdeal'),
         icon: '/images/pages/home/our-service/1.png',
+        aosData: 'fade-down-right',
       },
       {
         title: t('outService.content.services.uxUi'),
         preview: t('outService.content.services.uxUiPreview'),
         icon: '/images/pages/home/our-service/3.png',
+        aosData: 'fade-down-left',
       },
       {
         title: t('outService.content.services.webDesign'),
         preview: t('outService.content.services.webDesignPreview'),
         icon: '/images/pages/home/our-service/2.png',
+        aosData: 'fade-up-right',
       },
       {
         title: t('outService.content.services.seoForSocial'),
         preview: t('outService.content.services.seoForSocialPreview'),
         icon: '/images/pages/home/our-service/4.png',
+        aosData: 'fade-up-left',
       },
     ],
     []
@@ -71,7 +75,13 @@ export const OurService = () => {
           </Element.Typography>
           <div className={styles['section-our-service__content__box']}>
             {services?.map((item, index) => (
-              <div key={index} className={styles['section-our-service__content__box__item']}>
+              <div
+                key={index}
+                className={styles['section-our-service__content__box__item']}
+                data-aos={item.aosData}
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="800"
+              >
                 <Thumbnail src={item.icon} width={70} height={70} className="sm:mx-auto" />
                 <div className={styles['section-our-service__content__box__item__title']}>{item.title}</div>
                 <div className={styles['section-our-service__content__box__item__preview']}>{item.preview}</div>

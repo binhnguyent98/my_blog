@@ -7,13 +7,17 @@ import { TopSection } from './components/topSection';
 
 export const HomePage: PageProps = () => {
   return (
-    <>
-      <TopSection />
-      <OurService />
-      <OurSkill />
-      <BestSelling />
-      <OurBlog />
-      <Contact />
-    </>
+    <div className="overflow-hidden">
+      <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500">
+        <TopSection />
+      </div>
+      <div data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500">
+        <OurService />
+        <OurSkill />
+        <BestSelling />
+        <OurBlog />
+        <Contact />
+      </div>
+    </div>
   );
 };

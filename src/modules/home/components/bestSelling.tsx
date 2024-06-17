@@ -64,7 +64,13 @@ export const BestSelling = () => {
           </div>
           <div className={styles['section-best-selling__content__list']}>
             {selling?.map((item, index) => (
-              <div key={index} className={styles['section-best-selling__content__list__item']}>
+              <div
+                key={index}
+                className={styles['section-best-selling__content__list__item']}
+                data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1500"
+              >
                 <div className={styles['section-best-selling__content__list__item__price']}>
                   <Element.Typography fontWeight="bold" size="medium" className="!text-green-1">
                     {item.price}

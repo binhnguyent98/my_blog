@@ -1,8 +1,11 @@
 import 'reflect-metadata';
 import '@/styles/globals.scss';
+import 'aos/dist/aos.css';
 
+import AOS from 'aos';
 import { NextPage } from 'next';
 import type { AppProps } from 'next/app';
+import { useEffect } from 'react';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 
@@ -22,6 +25,10 @@ type AppPropsWithLayout = AppProps & {
 };
 
 export default function App({ Component, pageProps }: AppPropsWithLayout) {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <Provider store={storeGlobal}>
       <PersistGate persistor={persistor}>
