@@ -3,11 +3,13 @@ import { Contact } from './components/contact';
 import { OurBlog } from './components/ourBlog';
 import { OurService } from './components/ourService';
 import { OurSkill } from './components/ourSkill';
+import { SeoHead } from './components/seoHead';
 import { TopSection } from './components/topSection';
 
 export const HomePage: PageProps = () => {
   return (
     <div className="overflow-hidden">
+      <SeoHead />
       <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500">
         <TopSection />
       </div>
